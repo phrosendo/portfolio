@@ -2,12 +2,58 @@
     padding: 40px 32px;
     display: grid;
     gap: 24px;
+    justify-items: center;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: 
     "header"
     "btns"
     "experience"
     "info";
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        grid-area: btns;
+        width: 100%;
+
+        .btn-primary {
+            // background: linear-gradient(90deg, #777CF4 2.62%, #F47777 93.38%);
+            border-radius: 24px;
+            width: 325px;
+            padding: 12px;
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 500px;
+            font-size: 20px;
+            line-height: 30px;
+            text-transform: uppercase;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+
+            animation: 3.4s infinite brilho;
+            background-image: linear-gradient(45deg, #777CF4, #F47777, #777CF4, #F47777);
+            background-size: 400% 200%;
+    
+            @keyframes brilho {
+                0% {
+                    background-position: 0 0;
+                }
+    
+                100% {
+                    background-position: 100% 00;
+                }
+            }
+        }
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -22,7 +68,6 @@
         grid-template-areas: 
         "header info"
         "experience empty-1"
-        "empty-2 btns"
-        "info";
+        "empty-2 btns";
     }
 }
