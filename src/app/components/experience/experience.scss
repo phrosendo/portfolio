@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    grid-area: experience;
     max-width: 500px;
+    grid-area: experience;
 
     p {
         font-weight: 300;
@@ -13,81 +13,6 @@
         color: var(--text-secondary);
         text-align: center;
     }
-
-    .experience-time {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .experience-language {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-
-        img {
-            filter: grayscale(100%);
-        }
-
-        .experience-unit {
-            display: flex;
-            width: 300px;
-            height: 30px;
-            border-radius: 24px;
-            border: 1px solid var(--text-secondary);
-            justify-content: flex-start;
-            align-items: flex-end;
-            align-items: center;
-
-            .experience-measure {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 24px;
-                height: 30px;
-                border: 1px solid linear-gradient(45deg, #777CF4, #F47777, #777CF4, #F47777);
-                color: var(--text-primary);
-                font-weight: 300;
-                text-align: center;
-                font-size: 12px;
-
-                &.measure-1 {
-                    width: 33%;
-                }
-
-                &.measure-2 {
-                    width: 66%;
-                }
-
-                &.measure-3 {
-                    width: 80%;
-                }
-
-                &.measure-5 {
-                    width: 100%;
-                }
-
-                animation: 3.4s infinite brilho;
-                background-image: linear-gradient(45deg, #777CF4, #F47777, #777CF4, #F47777);
-                background-size: 400% 200%;
-
-                @keyframes brilho {
-                    0% {
-                        background-position: 0 0;
-                    }
-
-                    100% {
-                        background-position: 100% 00;
-                    }
-                }
-
-            }
-        }
-    }
-
 
     @media (min-width: 768px) {
         align-items: flex-start;

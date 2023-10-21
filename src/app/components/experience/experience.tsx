@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { SectionTitle } from "../sectionTitle/section-title"
+import { ExperienceTime } from "../experience-time/experience-time"
 import "./experience.scss"
 
 export function Experience() {
@@ -7,67 +7,10 @@ export function Experience() {
         <div className="experience">
             <SectionTitle text="Experience" />
             <p>6 anos trabalhando como QA/Developer, atualmente na empresa STEFANINI CONSULTORIA E ASSESSORIA EM INFORMATICA S.A.</p>
-            <div className="experience-time">
-                <div className="experience-language">
-                    <Image
-                        src="/react.png"
-                        alt="React Logo"
-                        width={40}
-                        height={40}
-                        priority
-                    />
-                    <div className="experience-unit">
-                        <div className="experience-measure measure-1">
-                            <span>1 ano</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="experience-language">
-                    <Image
-                        src="/java.png"
-                        alt="Java Logo"
-                        width={40}
-                        height={40}
-                        priority
-                    />
-                    <div className="experience-unit">
-                        <div className="experience-measure measure-5">
-                            <span>5 anos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="experience-language">
-                    <Image
-                        src="/js.png"
-                        alt="JavaScript Logo"
-                        width={40}
-                        height={40}
-                        priority
-                    />
-                    <div className="experience-unit">
-                        <div className="experience-measure measure-2">
-                        <span>2 anos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="experience-language">
-                    <Image
-                        src="/ts.png"
-                        alt="TypeScript Logo"
-                        width={40}
-                        height={40}
-                        priority
-                    />
-                    <div className="experience-unit">
-                        <div className="experience-measure measure-1">
-                            <span>1 ano</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ExperienceTime spanText="1 ano" imgText="/react.png" altLogo="React Logo" measureNumber={1}/>
+            <ExperienceTime spanText="5 anos" imgText="/java.png" altLogo="Java Logo" measureNumber={5}/>
+            <ExperienceTime spanText="2 anos" imgText="/js.png" altLogo="Java Script Logo" measureNumber={2}/>
+            <ExperienceTime spanText="1 ano" imgText="/ts.png" altLogo="Type Script Logo" measureNumber={3}/>
         </div>
     )
 }
